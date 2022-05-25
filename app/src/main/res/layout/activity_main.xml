@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+        <LinearLayout
+            android:id="@+id/distanceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/timeLayout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+
+
+            <TextView
+                android:id="@+id/distanceTxtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="30dp"
+                android:width="200dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:text="Enter distance run in km"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/distanceEdtTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:ems="2"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="80dp"
+        app:layout_constraintTop_toBottomOf="@id/distanceLayout"
+        app:layout_constraintBottom_toTopOf="@id/speedmsLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/timeTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:text="Enter time (hh:mm:ss)"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/timehEdtTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:ems="2"
+            android:gravity="center"
+            android:hint="hh"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/timemEdtTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:ems="2"
+            android:gravity="center"
+            android:hint="mm"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/timesEdtTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:ems="2"
+            android:gravity="center"
+            android:hint="ss"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/speedmsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="150dp"
+        app:layout_constraintTop_toBottomOf="@id/timeLayout"
+        app:layout_constraintBottom_toTopOf="@id/speedkmphLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/speedmsTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:text="Average speed in m/s"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/speedmsTxtVwDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:width="70dp"
+            android:height="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/speedkmphLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="220dp"
+        app:layout_constraintTop_toBottomOf="@id/speedmsLayout"
+        app:layout_constraintBottom_toTopOf="@id/speedmphLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/speedkmphTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Average speed in kmph"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/speedkmphTxtVwDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:width="70dp"
+            android:height="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/speedmphLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="290dp"
+        app:layout_constraintTop_toBottomOf="@id/speedkmphLayout"
+        app:layout_constraintBottom_toTopOf="@id/sPerLapLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/speedmphTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:text="Average speed in mph"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/speedmphTxtVwDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:width="70dp"
+            android:height="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sPerLapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="360dp"
+        tools:layout_editor_absoluteY="360dp"
+        app:layout_constraintTop_toBottomOf="@id/speedmphLayout"
+        app:layout_constraintBottom_toTopOf="@id/ppkmLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/sPerLapTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:text="Average seconds per lap"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/sPerLapTxtVwDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:width="70dp"
+            android:height="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ppkmLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="430dp"
+        tools:layout_editor_absoluteY="430dp"
+        app:layout_constraintTop_toBottomOf="@id/sPerLapLayout"
+        app:layout_constraintBottom_toTopOf="@id/ppmLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/ppkmTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:text="Pace per km"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/ppkmMinTxtVwDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:width="50dp"
+            android:height="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ppkmSecTxtVwDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:width="50dp"
+            android:height="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ppmLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="500dp"
+        tools:layout_editor_absoluteY="500dp"
+        app:layout_constraintTop_toBottomOf="@id/ppkmLayout"
+        app:layout_constraintBottom_toTopOf="@id/btnLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/ppmTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:text="Pace per mile"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/ppmMinTxtVwDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:width="50dp"
+            android:height="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ppmSecTxtVwDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:width="50dp"
+            android:height="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="570dp"
+        tools:layout_editor_absoluteY="570dp"
+        app:layout_constraintTop_toBottomOf="@id/ppmLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/calcButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="120dp"
+            android:text="Calculate"
+            android:onClick="onCalcButton"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
